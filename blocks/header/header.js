@@ -21,10 +21,15 @@ export default async function decorate(block) {
   let navBrand = nav.querySelector('.nav-brand');
   let navLinks = nav.querySelector('.nav-links');
 
+  removeButtonClass(navLogo);
+  removeButtonClass(navBrand);
+  removeButtonClass(navLinks);	
+
   const companyLook = document.createElement('div');
   companyLook.className = 'company-look';
   companyLook.append(navBrand);
   companyLook.append(navLinks);
+
 
   nav.append(navLogo);
   nav.append(companyLook);
@@ -32,4 +37,14 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+}
+
+function removeButtonClass(element){
+  while(element.querySelector('.button')) {
+    let link = element.querySelector('.button');
+    if (link) {
+      link.className = '';
+      link.closest('.button-container').className = '';
+    }
+  }
 }
