@@ -12,11 +12,34 @@ main .hero-container {
   min-height: 300px;
   display: flex;
   justify-content: center;
+  text-align: center;
+}
+
+.hero > div {
+  max-width: 76%;
+}
+
+.hero .siblings-hero{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero .siblings-hero > *{
+  padding-left:2px;
+  padding-right:2px;
 }
 
 .hero h1 {
-  max-width: 1200px;
   color: white;
+  font-size: 56px;
+}
+
+.hero h4{
+  color:white;
+  font-weight: 100;
+  font-size: 24px;
 }
 
 .hero picture {
@@ -31,4 +54,11 @@ main .hero-container {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.hero .button-container .button{
+  border-radius: 7px;
+  background-color: #DB6400;
+  font-weight: 100;
+  font-size: 24px;
 }
