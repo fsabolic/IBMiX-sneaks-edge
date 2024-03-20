@@ -12,8 +12,8 @@
 
 :root {
   /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
+  --link-color: #DB6400;
+  --link-hover-color: rgb(246, 117, 19);
   --background-color: white;
   --light-color: #eee;
   --dark-color: #ccc;
@@ -44,6 +44,8 @@
   /* nav height */
   --nav-height: 96px;
 }
+
+
 
 @font-face {
   font-family: roboto-fallback;
@@ -145,7 +147,7 @@ a.button:any-link, button {
   padding: 5px 30px;
   text-align: center;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 100;
   cursor: pointer;
   color: var(--background-color);
   background-color: var(--link-color);
@@ -153,7 +155,7 @@ a.button:any-link, button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
+  border-radius: 7px;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
