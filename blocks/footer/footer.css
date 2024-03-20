@@ -2,11 +2,15 @@ footer {
   padding: 1rem;
   background-color: var(--footer-color);
   font-size: var(--body-font-size-s);
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 footer .footer {
   max-width: 1200px;
-  margin: auto;
 }
 
 footer .footer p {
