@@ -1,5 +1,4 @@
 import { getMetadata } from '../../scripts/aem.js';
-import { getProduct } from '../../scripts/productAPI.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
