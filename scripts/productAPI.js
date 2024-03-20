@@ -11,7 +11,7 @@ export async function getProducts(limit) {
 }
 
 export async function getRandomProduct(limit) {
-  const response = await fetch("https://fakestoreapi.com/products/" + Math.abs(Math.random()%20+1));
+  const response = await fetch("https://fakestoreapi.com/products/"+(Math.abs(Math.ceil((Math.random()*10000))%20+1)).toString());
   const products = await response.json();
   return products;
 }
