@@ -1,5 +1,5 @@
 
-import { getProductHTML, getProducts, getRandomProduct } from '../../scripts/productAPI.js';
+import { getProductHTML, getProducts } from '../../scripts/productAPI.js';
 export default async function decorate(block) {
   let product = await getProducts(4);
   product = product[0];
