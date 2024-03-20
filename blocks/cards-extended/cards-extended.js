@@ -43,7 +43,7 @@ function constructProduct(product, ul) {
 
   const productPrice = document.createElement('p');
   productPrice.classList.add('product-price');
-  productPrice.textContent = product.price.toString().split('.')[1].length<2?product.price.toString()+"0":product.price;
+  productPrice.textContent = product.price;
 
   productHTML.append(productPrice);  
   
