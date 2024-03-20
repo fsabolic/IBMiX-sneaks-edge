@@ -1,11 +1,10 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
+import { getProducts } from '../../scripts/productAPI.js';
 import { getAllProducts } from '../../scripts/productAPI.js';
 
 export default async function decorate(block) {
   const numberOfProducts = block.children[0].children[0].innerHTML;
-  const response = await fetch("https://fakestoreapi.com/products?limit="+numberOfProducts);
-  const products = await response.json();
-  console.log(products);
+  const products = await getProducts(numberOfProducts);
   
   /* change to ul, li */
   const ul = document.createElement('ul');
@@ -15,10 +14,12 @@ export default async function decorate(block) {
     const productHTML = document.createElement('div');
     productHTML.classList.add('product');
 
-    const productImage = document.createElement('image');
+    const productPicture = document.createElement('picture');
+    const productImage = document.createElement('img');
     productImage.classList.add('product-image');
-    productImage.setAttribute('src',product["image"]);
-    productHTML.append(productImage);
+    productImage.setAttribute('src',""+product.image+"");
+    productPicture.append(productImage);
+    productHTML.append(productPicture);
 
     const productTitle = document.createElement('p');
     productTitle.classList.add('product-title');
@@ -42,7 +43,8 @@ export default async function decorate(block) {
     li.append(productHTML);
     ul.append(li);
   });
-  ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+  //ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
 }
+
