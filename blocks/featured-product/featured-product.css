@@ -1,0 +1,59 @@
+
+  .featured-product {
+    background-color: var(-background-color);
+    display: flex;
+    justify-content: center;
+    max-width: 200px;
+    margin:0 auto;
+    
+  }
+  
+  .cards-extended .product {
+    margin: 16px;
+    width: max-content;
+  }
+  
+  .product{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .product .product-title{
+    font-size: 21px;
+    font-weight: 600;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2; 
+    height: 70px;
+    margin:5px;
+  }
+  /*
+  .product .product-description{
+    text-align: justify;
+    font-style: italic;
+    font-size: 16px;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 4; 
+  }
+  */
+  
+  .product .product-price{
+    font-size: 18px;
+    color: #656565;
+    margin:5px;
+    
+  }
+  
+  .product .product-price::before{
+    content: "$";
+  }
+  
+  .product-image{
+    width:350px;
+  }
