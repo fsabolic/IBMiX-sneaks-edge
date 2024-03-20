@@ -32,21 +32,28 @@ function constructProduct(product, ul) {
   productTitle.classList.add('product-title');
   productTitle.textContent = product["title"];
   productHTML.append(productTitle);
-
+/*
   const productDescription = document.createElement('p');
   productDescription.classList.add('product-description');
 
   productDescription.textContent = product["description"];
-  if (product["description"].lenght > 50) {
-
-    productDescription.textContent = product["description"].substring(0, 50);
-  }
+  
   productHTML.append(productDescription);
+*/
 
   const productPrice = document.createElement('p');
   productPrice.classList.add('product-price');
   productPrice.textContent = product["price"];
-  productHTML.append(productPrice);
+  productHTML.append(productPrice);  
+  
+  const productButtonCont = document.createElement('p');
+  productButtonCont.classList.add('button-container');
+  const productLink = document.createElement('a');
+  productLink.textContent = 'Buy Now';
+  productLink.setAttribute('href','n/a');
+  productLink.classList.add('button');
+  productButtonCont.append(productLink);
+  productHTML.append(productButtonCont);
   li.append(productHTML);
   ul.append(li);
 }
