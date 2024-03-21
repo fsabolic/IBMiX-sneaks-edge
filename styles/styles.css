@@ -213,3 +213,10 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
 }
+
+.error{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
