@@ -37,8 +37,9 @@ function buildHeroBlock(main) {
       if(!nextButton) break;
     };
   }
-  
-  if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
+
+  if (h1 && picture && (h1.compareDocumentPosition(picture) 
+  & Node.DOCUMENT_POSITION_PRECEDING)) {
     const section = document.createElement('div');
     const elems = [picture,h1]; 
     if(h4)if(h1.nextElementSibling==h4) elems.push(h4);

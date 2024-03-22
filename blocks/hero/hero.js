@@ -6,7 +6,6 @@ export default function decorate(block) {
         element.classList.add('button-hero');
         buttonsHTML.append(element);
     });
-    console.log(buttonsHTML);
     block.append(buttonsHTML);
 
 }
