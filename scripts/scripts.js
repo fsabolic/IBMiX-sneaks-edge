@@ -24,6 +24,7 @@ function buildHeroBlock(main) {
   const picture = main.querySelector('picture');
   let h4 = main.querySelector('h4');
   const button = main.querySelector('.button-container');
+
   if(h4) h4.classList.add('description-hero');
   let siblings = null;
   if(button){
@@ -35,15 +36,11 @@ function buildHeroBlock(main) {
       nextButton = nextButton.nextElementSibling;
       if(!nextButton) break;
     };
-
   }
-  // eslint-disable-next-line no-bitwise
+  
   if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
-    
     const section = document.createElement('div');
-    const elems = [picture,h1];
-    
-
+    const elems = [picture,h1]; 
     if(h4)if(h1.nextElementSibling==h4) elems.push(h4);
     if(button)if(elems[elems.length-1].nextElementSibling.isEqualNode(button)) {   
       var siblingsHTML = document.createElement('div');
